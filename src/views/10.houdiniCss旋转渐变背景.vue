@@ -3,7 +3,7 @@
  * @Author: qsm 348867341@qq.com
  * @Date: 2023-09-18 07:42:09
  * @LastEditors: qsm 348867341@qq.com
- * @LastEditTime: 2023-10-12 23:29:44
+ * @LastEditTime: 2023-10-19 05:02:57
  * @FilePath: /vue-some-utils/src/App.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -14,6 +14,7 @@
 
         <template>
             <div class="card">
+              <div class="test"></div>
             </div>
         </template>
           
@@ -46,6 +47,14 @@
                 /* z-index: -1; */
                 /* 高斯模糊 边缘发光  */
                 filter: blur(20px);  
+            }
+
+            .test {
+              width: 100px;
+              height: 100px;
+              border: 1px solid #000;
+              background: #000;
+              margin: auto;
             }
 
 
