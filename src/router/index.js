@@ -69,6 +69,11 @@ const router = createRouter({
       name: '10',
       component: () => import('../views/11.滤镜对比度文字虚化展开效果.vue')
     },
+    {
+      path: '/11',
+      name: '11',
+      component: () => import('../views/12.canvas画一颗树.vue')
+    },
   ]
 })
 
