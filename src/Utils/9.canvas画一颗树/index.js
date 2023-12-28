@@ -39,16 +39,17 @@ const drawTree = (dom) => {
     ctx.lineTo(...endArray);
     ctx.lineWidth = lineWidth;
     ctx.strokeStyle = '#fff'; // 设置线条颜色
-    ctx.lineCap = 'round';
+    ctx.lineCap = 'round'; // 线条顶端弧形
     ctx.stroke();
 
     // 递归调用，绘制树的左右分支
     drawHandler(endArray, lineWidth * 0.8, length * 0.8, angle + Math.random() * 30);
     drawHandler(endArray, lineWidth * 0.8, length * 0.8, angle - Math.random() * 30);
   };
-
   // 调用绘制函数，传递初始参数
   drawHandler([0, 0], 30, 200, 90);
+  // 调整第二棵树的初始位置
+  drawHandler([600, 0], 30, 200, 90);
 };
 
 
