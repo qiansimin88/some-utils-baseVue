@@ -74,6 +74,11 @@ const router = createRouter({
       name: '11',
       component: () => import('../views/12.canvas画一颗树.vue')
     },
+    {
+      path: '/12',
+      name: '12',
+      component: () => import('../views/13.滚动粘性动画.vue')
+    },
   ]
 })
 
