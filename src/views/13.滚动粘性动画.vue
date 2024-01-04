@@ -55,6 +55,7 @@
   import { ref, onMounted } from 'vue'
 
   const domList = document.querySelectorAll('.list-item')
+  const itemMap = new Map()
 
   // 通过限定范围来求  动画当前的属性值
   const handlerAnimation = (startX, endX, startValue, endValue) => {
@@ -79,20 +80,28 @@
 
 
     const collection = (x, ) => {
-        const itemMap = new Map()
-
         for (const item of domList) {
             itemMap.set(item, (x) => {
                 return {
-                    opacity: handlerAnimation()
+                    opacity: 0
                 }
             })
         }
     }
 
+    const changeHandler = () => {
+        console.log(itemMap)
+        for (const [key, value] of itemMap) {
+            console.log(key, value)
+        }
+    }
+
+
 
     const cav = ref(null)
     onMounted(() => {
+        collection()
+        changeHandler()
         window.addEventListener('scroll', () => {
         })
     })
